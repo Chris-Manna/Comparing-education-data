@@ -4,8 +4,8 @@ import requests
 
 def make_api_request(url = "https://data.cityofnewyork.us/resource/ns8x-c6af.json"):
     request_content = requests.get(url)
-    graduate_outcomes = request_content.json()
-    return graduate_outcomes
+    outcomes = request_content.json()
+    return outcomes
     
 def get_total_grads():
     grad_info = make_api_request()
