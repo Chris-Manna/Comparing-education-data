@@ -1,6 +1,4 @@
 import requests
-# from plotly.offline import init_notebook_mode, plot, iplot
-# import plotly.graph_objs as go
 
 def make_api_request(url = "https://data.cityofnewyork.us/resource/ns8x-c6af.json"):
     request_content = requests.get(url)
@@ -22,11 +20,6 @@ def get_total_dropped_out():
         if dropout['dropped_out_n'] != "s":
             total += float(dropout['dropped_out_n'])
     return int(total)
-
-# print("total_grads: " + str(get_total_grads()))
-# print("total_dropped_out: " + str(get_total_dropped_out()))
-# print("percentage: " + str(get_total_dropped_out() / get_total_grads()))
-# 20% total dropout rate
 
 def get_years():
     all_info = make_api_request()
