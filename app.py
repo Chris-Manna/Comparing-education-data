@@ -1,5 +1,6 @@
-# importing dash info
 from models import *
+
+# importing dash info
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
@@ -29,16 +30,6 @@ app.layout = html.Div(
         )
     ]
 )
-
-# print(" | ".join(get_x_values()[0])+"\n"+ " values ".join(get_x_values()[1]))
-#print(get_x_values()[1])
-# @app.route('/prison')
-# def prison_data():
-#     all_years = db.session.query(DOC_Annual_Data).all()
-#     all_years_dicts = [fy_ave.to_dict() for fy_ave in all_years]
-# 
-# 
-#     return jsonify(all_years_dicts)
 
 # @app.route('/education')
 # def education_data():

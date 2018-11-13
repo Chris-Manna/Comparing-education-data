@@ -3,11 +3,6 @@ from flask_sqlalchemy import SQLAlchemy
 
 import re
 
-# importing dash info
-import dash
-import dash_core_components as dcc
-import dash_html_components as html
-
 # initialize new flask app
 app = Flask(__name__)
 
@@ -34,3 +29,4 @@ class DOC_Annual_Data(db.Model):
             # 'inmate admissions': self.inmate_admissions
         }
         return fy_ave
+        

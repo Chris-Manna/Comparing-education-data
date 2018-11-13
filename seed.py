@@ -12,22 +12,9 @@ def get_doc_data(url = "https://data.cityofnewyork.us/resource/hh4y-wm6k.json"):
             # get each row in the data base
             fy_data = DOC_Annual_Data(fiscal_year=stat['fiscal_year'], average_inmate_population=stat["statistic_type_count"])
             db.session.add(fy_data) 
-
+        # if stat["statistic_type_name"] == 'Annual Inmate Admissions':
+        #     fy_data = DOC_Annual_Data(fiscal_year=stat['fiscal_year'], statistic_type_count=stat[statistic_type_count])
+        #     db.session.add(fy_data)
 get_doc_data()
 
 db.session.commit()
-    
-
-    
-# daniel = User(username="Daniel")
-# jeff = User(username="Jeff")
-# rachel = User(username="rachel")
-# 
-# daniel.tweets = [Tweet(text="I love hogs"), Tweet(text="Hogs are the best way to teach react"), Tweet(text="programming is lyfe")]
-# jeff.tweets = [Tweet(text="Data Science is awesome"), Tweet(tweet="Python is pretty neat"), Tweet(text="Wishing I was chillin' in Mexico rn")]
-# rachel.tweets = [Tweet(text="RPDR is the best show"), Tweet(text="I just made the coolest NPM package!"), Tweet(text="running is so fun!")]
-# 
-# db.session.add(jeff)
-# db.session.add(rachel)
-# db.session.add(daniel)
-# db.session.commit()
