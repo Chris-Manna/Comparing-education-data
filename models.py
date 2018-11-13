@@ -27,6 +27,17 @@ class DOC_Annual_Data(db.Model):
             'fiscal year': self.fiscal_year, 
             'ave inmate pop': self.average_inmate_population,
             'inmate admissions': self.inmate_admissions
+            
         }
         return fy_ave
-        
+
+# class NYPD_Comp_Data_Historic(db.Model):
+#     __tablename__= 'nypd_comp_data'
+#     id = db.Column(db.Integer, primary_key=True)
+#     rpt_dt = db.Column(db.Text, nullable=False)
+#     pd_desc = db.Column(db.Text, nullable=False)
+#     def to_dict(self):
+#         year = {
+# 
+#         }
+# use ORM aggregate methods
