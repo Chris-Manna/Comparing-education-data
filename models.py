@@ -31,13 +31,15 @@ class DOC_Annual_Data(db.Model):
         }
         return fy_ave
 
-# class NYPD_Comp_Data_Historic(db.Model):
-#     __tablename__= 'nypd_comp_data'
-#     id = db.Column(db.Integer, primary_key=True)
-#     rpt_dt = db.Column(db.Text, nullable=False)
-#     pd_desc = db.Column(db.Text, nullable=False)
-#     def to_dict(self):
-#         year = {
-# 
-#         }
-# use ORM aggregate methods
+class NYPD_Comp_Data_Historic(db.Model):
+    __tablename__= 'nypd_comp_data'
+    id = db.Column(db.Integer, primary_key=True)
+    rpt_dt = db.Column(db.Text, nullable=False)
+    pd_desc = db.Column(db.Text, nullable=False)
+    def to_dict(self):
+        year = {
+            'id': self.id,
+            'report date' : self.rpt_dt,
+            'police description' : self.pd_desc            
+        }
+#use ORM aggregate methods
